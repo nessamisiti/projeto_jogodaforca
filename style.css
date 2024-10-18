@@ -1,0 +1,115 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffe6f2; 
+    color: #4b0044; 
+}
+
+#container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f8d3e0; 
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #d5006d; 
+    margin-bottom: 20px;
+}
+
+#jogo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#imagens {
+    margin-bottom: 20px;
+}
+
+#imagem-forca {
+    border-radius: 10px;
+    border: 2px solid #d5006d; 
+}
+
+#palavra-teclado {
+    text-align: center;
+}
+
+#palavra {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #d5006d; 
+}
+
+#dica {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #6a1b9a; 
+}
+
+#teclado {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+#teclado button {
+    background-color: #f06292; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#teclado button:hover {
+    background-color: #ec407a; 
+}
+
+#chute-palavra {
+    margin: 20px 0;
+}
+
+#label-chute {
+    margin-right: 10px;
+}
+
+#palavra-chute {
+    padding: 5px;
+    border: 2px solid #d5006d;
+    border-radius: 5px;
+}
+
+#btn-chutar, #btn-reiniciar {
+    background-color: #d5006d; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+#btn-chutar:hover, #btn-reiniciar:hover {
+    background-color: #c51162; 
+}
+
+#tentativas {
+    font-weight: bold;
+    margin-top: 20px;
+    color: #8e24aa; 
+}
