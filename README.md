@@ -5,10 +5,15 @@ Este projeto é uma implementação de um jogo da forca, onde o usuário pode ad
 ## Funcionalidades Principais
 
 **Chutar Palavras**: O usuário pode adivinhar a palavra, uma letra de cada vez.
+
 **Reiniciar Jogo**: O usuário pode iniciar uma nova rodada, tentando novamente (reiniciar o jogo).
+
 **Dica ou Tema**: Cada palavra tem uma dica ou tema exibido de forma visual para ajudar o jogador.
+
 **Palavras de uma API Externa**: As palavras são obtidas de uma API externa para maior variedade.
+
 **Teclado Virtual**: Um teclado virtual é renderizado na tela, permitindo interação com o jogo sem a necessidade de teclado físico (manipulação do DOM).
+
 
 ## Funcionalidades Extras
 **Pontuação**: O jogo possui um sistema de pontuação baseado no tempo e na quantidade de acertos do jogador.
