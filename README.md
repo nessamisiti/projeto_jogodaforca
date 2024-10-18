@@ -1,4 +1,5 @@
 Jogo da Forca
+
 Este projeto é uma implementação de um jogo da forca, onde o usuário pode adivinhar palavras letra por letra com base em dicas fornecidas. O jogo utiliza palavras de uma API externa e inclui um teclado virtual para interação com o usuário.
 
 Funcionalidades Principais
