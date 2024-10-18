@@ -103,6 +103,14 @@ function mostrarElementos() {
   labelInputHtml!.style.display = 'block';
 }
 
+function salvarHistorico(){
+  
+}
+
+function estilizarTeclado(){
+
+}
+
 btnChutarHtml!.addEventListener('click', () => {
   verificarPalavra(inputHtml.value);
   inputHtml.value = '';
