@@ -1,0 +1,50 @@
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 100vh;
+}
+
+#jogo {
+  display: flex;
+}
+
+#palavra-teclado {
+  margin: 50px;
+}
+
+#palavra {
+  font-size: 80px;
+  margin: 40px;
+}
+
+#dica {
+  margin-left: 40px;
+  margin-top: 0px;
+  font-size: 20px;
+}
+
+#teclado button {
+  width: 35px;
+  height: 35px;
+}
+
+#chute-palavra {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+#chute-palavra button {
+  margin-top: 5px;
+  width: 80px;
+}

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/style.css">
+    <title>Forca</title>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Jogo Da Forca</h1>
+      <section id="jogo">
+        <div id="imagens">
+          <img src="./images.png" alt="forca" height="200px" id="imagem-forca">
+        </div>
+        <div id="palavra-teclado">
+            <p id="palavra">_ _ _ _ </p>
+            <p id="dica">Sentimento</p>
+            <div id="teclado">
+        
+            </div>
+            <div id="chute-palavra">
+              <label id="label-chute" for="palavra-chute">Chutar palavra completa:</label>
+              <input type="text" name="palavra-chute" id="palavra-chute">
+              <button id="btn-chutar">Chutar</button>
+            </div>
+            <p id="tentativas">6 tentativas restantes!</p>
+            <button id="btn-reiniciar">Reiniciar</button>
+        </div>
+      </section>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
