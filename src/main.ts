@@ -2,6 +2,7 @@ let palavra : string = '';
 let dica : string = '';
 let tentativas : number = 6;
 let letrasCorretas : string[] = [];
+let indiceImg : number = 7;
 
 const dicaHtml  = document.getElementById('dica');
 const palavraHtml = document.getElementById('palavra');
@@ -11,12 +12,19 @@ const inputHtml = document.getElementById('palavra-chute') as HTMLInputElement;
 const btnChutarHtml = document.getElementById('btn-chutar');
 const btnReiniciarHtml = document.getElementById('btn-reiniciar');
 const labelInputHtml = document.getElementById('label-chute');
+const imgForcaHtml = document.querySelector("img");
 
 function renderizarJogo() {
 
   dicaHtml!.innerText = `Dica: ${dica}`
   const palavraFormatada = palavra.split('').map(letra => letrasCorretas.includes(letra) ? letra : '_').join(' ');
   palavraHtml!.innerText = palavraFormatada;
+
+  if(tentativas > 0 && tentativas < 6){
+    indiceImg = tentativas + 1;
+    imgForcaHtml!.src = `img${indiceImg}.png`
+  }
+  
 
   if(!palavraFormatada.includes('_')){
     tentativasHtml!.innerText = 'VOCÊ GANHOOOU!!!'
@@ -27,6 +35,7 @@ function renderizarJogo() {
     tentativasHtml!.textContent = `${tentativas} restantes`;
   } else if(tentativas <= 0){
     tentativasHtml!.innerText = `Você perdeu, tente novamente! A palavra era ${palavra}`
+    imgForcaHtml!.src = 'img1.png'
     esconderElementos();
   }
 
@@ -41,6 +50,7 @@ async function encontrarPalavra() {
     dica = palavraAleatoria.dica;
     tentativas = 6;
     letrasCorretas = [];
+    imgForcaHtml!.src = 'img7.png'
 
     renderizarJogo();
   } catch (error) {
@@ -105,7 +115,7 @@ function mostrarElementos() {
 }
 
 function salvarHistorico(){
-  
+
 }
 
 function estilizarTeclado(letra : string, letraEncontrada: boolean){
