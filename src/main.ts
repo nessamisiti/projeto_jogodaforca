@@ -156,12 +156,14 @@ function registrarDerrota(): void {
 }
 
 function estilizarTeclado(letra: string, letraEncontrada: boolean) : void {
-	const buttonLetra = document.getElementById("button" + letra);
+	const buttonLetra = document.getElementById("button" + letra) as HTMLButtonElement;
 	if (letraEncontrada) {
 		buttonLetra!.style.backgroundColor = "green";
 	} else {
 		buttonLetra!.style.backgroundColor = "red";
 	}
+
+  buttonLetra!.disabled = true;
 }
 
 btnChutarHtml!.addEventListener("click", () => {
