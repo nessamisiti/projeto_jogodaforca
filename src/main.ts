@@ -14,7 +14,7 @@ const btnReiniciarHtml = document.getElementById("btn-reiniciar");
 const labelInputHtml = document.getElementById("label-chute");
 const imgForcaHtml = document.querySelector("img");
 
-function renderizarJogo() {
+function renderizarJogo() : void {
 	dicaHtml!.innerText = `Dica: ${dica}`;
 	const palavraFormatada = palavra
 		.split("")
@@ -43,7 +43,7 @@ function renderizarJogo() {
 	}
 }
 
-async function encontrarPalavra() {
+async function encontrarPalavra() : Promise<void>{
 	try {
 		const response = await fetch("http://localhost:3000/palavras");
 		const palavras = await response.json();
@@ -62,7 +62,7 @@ async function encontrarPalavra() {
 	}
 }
 
-function formarTeclado() {
+function formarTeclado() : void {
 	for (let i = 65; i < 90; i++) {
 		const btnLetra = document.createElement("button");
 		const letra = String.fromCharCode(i);
@@ -73,7 +73,7 @@ function formarTeclado() {
 	}
 }
 
-function verificarLetra(letra: string) {
+function verificarLetra(letra: string) : void{
 	if (palavra.includes(letra)) {
 		estilizarTeclado(letra, true);
 		letrasCorretas.push(letra);
@@ -87,7 +87,7 @@ function verificarLetra(letra: string) {
 	renderizarJogo();
 }
 
-function verificarPalavra(tentativaPalavra: string) {
+function verificarPalavra(tentativaPalavra: string) : void{
 	if (tentativaPalavra.toUpperCase() === palavra) {
 		for (const letra of tentativaPalavra) {
 			letrasCorretas.push(letra);
@@ -102,19 +102,19 @@ function verificarPalavra(tentativaPalavra: string) {
 	}
 }
 
-function reiniciarJogo() {
+function reiniciarJogo() : void {
 	encontrarPalavra();
 	mostrarElementos();
 }
 
-function esconderElementos() {
+function esconderElementos() : void {
 	tecladoHtml!.style.display = "none";
 	inputHtml!.style.display = "none";
 	btnChutarHtml!.style.display = "none";
 	labelInputHtml!.style.display = "none";
 }
 
-function mostrarElementos() {
+function mostrarElementos() : void {
 	tecladoHtml!.style.display = "block";
 	inputHtml!.style.display = "block";
 	btnChutarHtml!.style.display = "block";
@@ -155,7 +155,7 @@ function registrarDerrota(): void {
 	atualizarProgresso();
 }
 
-function estilizarTeclado(letra: string, letraEncontrada: boolean) {
+function estilizarTeclado(letra: string, letraEncontrada: boolean) : void {
 	const buttonLetra = document.getElementById("button" + letra);
 	if (letraEncontrada) {
 		buttonLetra!.style.backgroundColor = "green";
