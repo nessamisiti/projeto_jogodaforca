@@ -91,12 +91,6 @@ http://localhost:3000/palavras
 3. Se errar, será indicado quantas tentativas você ainda tem.
 4. Se acertar a palavra, poderá reiniciar o jogo para tentar uma nova palavra.
 
-
-## Sugestão de Interface
-
-![alt text](public/forca-icon.png)
-
-
 ## Desenvolvedores
 
 Desenvolvido pela **Equipe 5** : Letícia Ribeiro, Maiane, Vanessa Misiti e Yasmin Silva 
