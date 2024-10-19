@@ -52,6 +52,7 @@ function formarTeclado(){
   for (let i = 65; i < 90; i++) {
     const btnLetra = document.createElement('button');
     const letra = String.fromCharCode(i);
+    btnLetra.id = "button" + letra;
     btnLetra.innerText = letra;
 
     tecladoHtml?.appendChild(btnLetra);
@@ -107,8 +108,13 @@ function salvarHistorico(){
   
 }
 
-function estilizarTeclado(){
-
+function estilizarTeclado(letra : string, letraEncontrada: boolean){
+  const buttonLetra = document.getElementById("button" + letra);
+  if(letraEncontrada) {
+    buttonLetra!.style.backgroundColor  = "green";
+  } else {
+    buttonLetra!.style.backgroundColor  = "red";
+  }
 }
 
 btnChutarHtml!.addEventListener('click', () => {
