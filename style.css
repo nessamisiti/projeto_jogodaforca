@@ -80,11 +80,14 @@ h1 {
 }
 
 #chute-palavra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 20px 0;
 }
 
 #label-chute {
-    margin-right: 10px;
+    margin-bottom: 5px;
 }
 
 #palavra-chute {
@@ -112,4 +115,8 @@ h1 {
     font-weight: bold;
     margin-top: 20px;
     color: #8e24aa; 
+}
+
+#vitorias, #derrotas {
+    margin-top: 5px;
 }
