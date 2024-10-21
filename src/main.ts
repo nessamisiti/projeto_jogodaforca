@@ -28,7 +28,7 @@ function renderizarJogo() : void {
 	}
 
 	if (!palavraFormatada.includes("_")) {
-		tentativasHtml!.innerText = "VOCÊ GANHOOOU!!!";
+		tentativasHtml!.innerText = "Parabéns, você acertou a palavra! 🎉";
 		registrarVitoria();
 		esconderElementos();
 	}
@@ -36,7 +36,7 @@ function renderizarJogo() : void {
 	if (tentativas > 0 && palavraFormatada.includes("_")) {
 		tentativasHtml!.textContent = `${tentativas} restantes`;
 	} else if (tentativas <= 0) {
-		tentativasHtml!.innerText = `Você perdeu, tente novamente! A palavra era ${palavra}`;
+		tentativasHtml!.innerText = `Não foi dessa vez! A palavra correta era ${palavra}.`;
 		imgForcaHtml!.src = "img1.png";
 		registrarDerrota();
 		esconderElementos();
@@ -82,22 +82,25 @@ function verificarLetra(letra: string) : void{
 		tentativas--;
 	}
 
-	console.log(letrasCorretas);
-
 	renderizarJogo();
 }
 
 function verificarPalavra(tentativaPalavra: string) : void{
+	if (tentativaPalavra.trim() === "") {
+		alert("Por favor, digite uma palavra antes de fazer uma tentativa!");
+		return;
+	}
+
 	if (tentativaPalavra.toUpperCase() === palavra) {
 		for (const letra of tentativaPalavra) {
 			letrasCorretas.push(letra);
 		}
 		palavraHtml!.innerText = palavra;
-		tentativasHtml!.innerText = `VOCÊ GANHOOOU!!`;
+		tentativasHtml!.innerText = `Parabéns, você acertou a palavra! 🎉`;
 		registrarVitoria();
 		esconderElementos();
 	} else {
-		tentativasHtml!.innerText = `Você perdeu, tente novamente! A palavra era ${palavra}`;
+		tentativasHtml!.innerText = `Não foi dessa vez! A palavra correta era ${palavra}.`;
 		registrarDerrota();
 		esconderElementos();
 	}
@@ -180,7 +183,6 @@ btnChutarHtml!.addEventListener("click", () => {
 
 tecladoHtml!.addEventListener("click", (event) => {
 	const letra = (event.target as HTMLButtonElement).textContent!;
-	console.log(letra);
 	verificarLetra(letra);
 });
 
@@ -189,5 +191,4 @@ btnReiniciarHtml!.addEventListener("click", () => {
 });
 
 formarTeclado();
-atualizarProgresso();
 encontrarPalavra();
