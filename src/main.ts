@@ -63,7 +63,7 @@ async function encontrarPalavra() : Promise<void>{
 }
 
 function formarTeclado() : void {
-	for (let i = 65; i < 90; i++) {
+	for (let i = 65; i < 91; i++) {
 		const btnLetra = document.createElement("button");
 		const letra = String.fromCharCode(i);
 		btnLetra.id = "button" + letra;
