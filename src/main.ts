@@ -97,13 +97,13 @@ function verificarPalavra(tentativaPalavra: string) : void{
 		registrarVitoria();
 		esconderElementos();
 	} else {
-		tentativas--;
-		tentativasHtml!.innerText = `Você errou, restam ${tentativas} tentativas`;
+		tentativasHtml!.innerText = `Você perdeu, tente novamente! A palavra era ${palavra}`;
+		registrarDerrota();
+		esconderElementos();
 	}
 }
 
 function reiniciarJogo() : void {
-
 	const botoes = tecladoHtml!.getElementsByTagName('button');
 	for (let i = 0; i < botoes.length; i++) {
 		botoes[i].style.backgroundColor = ""; 
