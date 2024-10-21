@@ -103,6 +103,13 @@ function verificarPalavra(tentativaPalavra: string) : void{
 }
 
 function reiniciarJogo() : void {
+
+	const botoes = tecladoHtml!.getElementsByTagName('button');
+	for (let i = 0; i < botoes.length; i++) {
+		botoes[i].style.backgroundColor = ""; 
+		botoes[i].disabled = false; 
+	}
+
 	encontrarPalavra();
 	mostrarElementos();
 }
