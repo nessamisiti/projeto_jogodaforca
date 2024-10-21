@@ -70,7 +70,7 @@ npm run dev
 5. **Acesse o jogo no navegador**:
 
 ```bash
-http://localhost:3000/palavras
+http://localhost:5173/
 ```
 
 ## Tecnologias Utilizadas
@@ -93,7 +93,7 @@ http://localhost:3000/palavras
 
 ## Desenvolvedores
 
-Desenvolvido pela **Equipe 5** : Letícia Ribeiro, Maiane, Vanessa Misiti e Yasmin Silva 
+Desenvolvido pela **Equipe 5** : Letícia Ribeiro, Maiane Dhienis, Vanessa Misiti e Yasmin Silva 
 
 ## Licença
 
