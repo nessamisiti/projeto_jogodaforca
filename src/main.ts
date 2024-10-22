@@ -101,6 +101,7 @@ function verificarPalavra(tentativaPalavra: string) : void{
 		esconderElementos();
 	} else {
 		tentativasHtml!.innerText = `Não foi dessa vez! A palavra correta era ${palavra}.`;
+		imgForcaHtml!.src = "img1.png";
 		registrarDerrota();
 		esconderElementos();
 	}
